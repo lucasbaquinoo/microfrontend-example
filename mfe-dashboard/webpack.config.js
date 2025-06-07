@@ -18,6 +18,11 @@ module.exports = {
     ]
   },
 
+  output: {
+    publicPath: "auto",
+  },
+
+
   plugins: [
     new ModuleFederationPlugin({
       name: "dashboard",
