@@ -19,6 +19,8 @@ module.exports = {
   },
 
   output: {
+    path: __dirname + "/build",
+    filename: "[name].js",
     publicPath: "auto",
   },
 
