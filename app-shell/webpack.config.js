@@ -18,12 +18,17 @@ module.exports = {
     ]
   },
 
+  output: {
+    path: __dirname + "/build",
+    filename: "[name].js",
+  },
+
   plugins: [
     new ModuleFederationPlugin({
       name: "app_shell",
       remotes: {
-        header: "header@http://localhost:3001/remoteEntry.js",
-        dashboard: "dashboard@http://localhost:3002/remoteEntry.js",
+        header: "header@https://mfe-header-lime.vercel.app//remoteEntry.js",
+        dashboard: "dashboard@https://mfe-dashboard-bay.vercel.app//remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({ template: "./public/index.html" }),
